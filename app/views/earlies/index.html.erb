@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Earlies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>O que pretende fazer hoje?</th>
+      <th>Há algum impedimento?</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @earlies.each do |early| %>
+      <tr>
+        <td><%= early.date %></td>
+        <td><%= early.schedule %></td>
+        <td><%= early.impediment %></td>
+        <td><%= link_to 'Ver', early %></td>
+        <td><%= link_to 'Editar', edit_early_path(early) %></td>
+        <td><%= link_to 'Apagar', early, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Early', new_early_path %>

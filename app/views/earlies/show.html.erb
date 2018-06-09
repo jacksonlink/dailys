@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @early.date %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @early.schedule %>
+</p>
+
+<p>
+  <strong>Impediment:</strong>
+  <%= @early.impediment %>
+</p>
+
+<%= link_to 'Edit', edit_early_path(@early) %> |
+<%= link_to 'Back', earlies_path %>

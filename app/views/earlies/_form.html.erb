@@ -1,0 +1,37 @@
+<%= form_with(model: early, local: true) do |form| %>
+  <% if early.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(early.errors.count, "error") %> prohibited this early from being saved:</h2>
+
+      <ul>
+      <% early.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.date_select :date %>
+  </div>
+
+  <div class="field">
+    <%= form.label :schedule %>
+    <%= form.text_field :schedule %>
+  </div>
+
+  <div class="field">
+    <%= form.label :impediment %>
+    <%= form.check_box :impediment %>
+  </div>
+  
+  <div class="field">
+		<%= form.label :user %>
+		<%= collection_select(:early, :user_id, User.all, :id, :name) %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @late.date %>
+</p>
+
+<p>
+  <strong>Schedule:</strong>
+  <%= @late.schedule %>
+</p>
+
+<p>
+  <strong>Impediment:</strong>
+  <%= @late.impediment %>
+</p>
+
+<%= link_to 'Edit', edit_late_path(@late) %> |
+<%= link_to 'Back', lates_path %>
