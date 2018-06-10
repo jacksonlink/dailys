@@ -26,8 +26,7 @@ class UsersController < ApplicationController
   def create
     Rails.logger.debug("CCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCCC")
     @user = User.new(user_params)
-    UserMailer.send_schedule(@user.email).deliver_now
-   
+    #UserMailer.send_schedule(@user.email).deliver_now
     respond_to do |format|
       if @user.save
         format.html { redirect_to @user, notice: 'User was successfully created.' }
