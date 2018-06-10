@@ -3,7 +3,7 @@ class UserMailer < ApplicationMailer
     default from: 'jackson.gomes.dev@gmail.com'
     layout "mailer"
     def send_schedule(user)
-        @user = user
+        @user = user 
         mail(to: @user, subject: 'Welcome to My Awesome Site')
     end
 end

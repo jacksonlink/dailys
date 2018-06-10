@@ -3,7 +3,7 @@ namespace :send_mail_task do
   task send_: :environment do
   end
 
-  desc "TODO"
+  desc "TODO" 
   task send_mail_early: :environment do
     User.all.each do |user|
       #[AKELA_CHAMADA_DO_MAILER](user.email)
