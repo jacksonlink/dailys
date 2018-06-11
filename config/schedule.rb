@@ -22,13 +22,10 @@
 #     rake 'task_namespace:send_mail'
 # end
 
- every 1.minute do
-    #command Rails.logger.debug("YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYY")
- end
-
-every 2.minutes do
+every 1.day, at: '8:00 am' do
     rake 'rake send_mail_task:send_mail_early'
+end
+
+every 1.day, at: '4:00 pm' do
     rake 'rake send_mail_task:send_mail_late'
-    command mailto: 'jacksonfa7@gmail.com'
-    puts 'PASSOU PELO SCHEDULE DO WHENEVER'
 end
