@@ -3,4 +3,8 @@ class User < ApplicationRecord
 
     has_many :early
     has_many :blate
+
+    validates_presence_of :name
+    validates_presence_of :email
+    validates_presence_of :team
 end

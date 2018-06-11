@@ -1,14 +1,17 @@
 class UserMailer < ApplicationMailer
-    #default from: 'elano.garcez.dev@gmail.com'
+    
     default from: 'jackson.gomes.dev@gmail.com'
     layout "mailer"
-    def send_schedule_early(user)
+
+    def send_schedule_early(user, user_id)
         @user = user
-        mail(to: @user, subject: 'Welcome to My Awesome Site')
+        @user_id = user_id
+        mail(to: user, subject: 'Planejado para hoje')
     end
 
-    def send_schedule_late(user)
+    def send_schedule_late(user, user_id)
         @user = user
-        mail(to: @user, subject: 'Welcome to My Awesome Site')
+        @user_id = user_id
+        mail(to: user, subject: 'Realizado hoje')
     end
 end
