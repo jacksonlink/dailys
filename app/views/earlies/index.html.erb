@@ -21,7 +21,7 @@
             <td><%= link_to early.id, early_path(early) %></td>
             <td><%= early.date %></td>
             <td><%= early.schedule %></td>
-            <td><%= early.impediment %></td>
+            <td><% if early.impediment %> <%= "Sim" %> <%else%> <%= "Não" %> <%end%></td>
             <td><%= early.user_id %></td>
             <td>
               <%= link_to t('.show', :default => t("helpers.links.show")), early_path(early), :class => 'btn btn-default btn-xs' %>
@@ -37,7 +37,7 @@
           <td><%= link_to early.id, early_path(early) %></td>
           <td><%= early.date %></td>
           <td><%= early.schedule %></td>
-          <td><%= early.impediment %></td>
+          <td><% if early.impediment %> <%= "Sim" %> <%else%> <%= "Não" %> <%end%></td>
           <td><%= early.user_id %></td>
           <td>
             <%= link_to t('.show', :default => t("helpers.links.show")), early_path(early), :class => 'btn btn-default btn-xs' %>

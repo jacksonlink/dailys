@@ -21,7 +21,7 @@
             <td><%= link_to late.id, late_path(late) %></td>
             <td><%= late.date %></td>
             <td><%= late.schedule %></td>
-            <td><%= late.impediment %></td>
+            <td><% if late.impediment %> <%= "Sim" %> <%else%> <%= "Não" %> <%end%></td>
             <td><%= late.user_id %></td>
             <td>
               <%= link_to t('.show', :default => t("helpers.links.show")), late_path(late), :class => 'btn btn-default btn-xs' %>
@@ -37,7 +37,7 @@
           <td><%= link_to late.id, late_path(late) %></td>
           <td><%= late.date %></td>
           <td><%= late.schedule %></td>
-          <td><%= late.impediment %></td>
+          <td><% if late.impediment %> <%= "Sim" %> <%else%> <%= "Não" %> <%end%></td>
           <td><%= late.user_id %></td>
           <td>
             <%= link_to t('.show', :default => t("helpers.links.show")), late_path(late), :class => 'btn btn-default btn-xs' %>
