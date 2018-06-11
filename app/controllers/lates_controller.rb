@@ -4,7 +4,7 @@ class LatesController < ApplicationController
   # GET /lates
   # GET /lates.json
   def index
-    @lates = Late.all
+    @lates = Late.all.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /lates/1

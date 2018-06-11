@@ -1,0 +1,30 @@
+"pt-BR":
+  activerecord:
+    models:
+      user: Usuário
+      team: Equipe
+      early: Planejado
+      late: Realizado
+    attributes:
+      user:
+        id: "Id"
+        name: "Nome"
+        email: "E-Mail"
+        team: "Equipe"
+        created_at: "Data de Criação"
+      team:
+        id: "Id"
+        name: "Nome"
+        created_at: "Data de Criação"
+      early:
+        date: "Data"
+        schedule: "Planejamento"
+        impediment: "Impedimento"
+        user_id: "Usuário"
+        created_at: "Criado em"
+      late:
+        date: "Data"
+        schedule: "Planejamento"
+        impediment: "Impedimento"
+        user_id: "Usuário"
+        created_at: "Criado em"

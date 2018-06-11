@@ -4,7 +4,7 @@ class EarliesController < ApplicationController
   # GET /earlies
   # GET /earlies.json
   def index
-    @earlies = Early.all
+    @earlies = Early.all.paginate(:page => params[:page], :per_page => 5)
   end
 
   # GET /earlies/1

@@ -7,8 +7,8 @@ namespace :send_mail_task do
   task send_mail_early: :environment do
     User.all.each do |user|
       #[AKELA_CHAMADA_DO_MAILER](user.email)
-      UserMailer.send_schedule(user.email).deliver_now
-      Rails.logger.debug(user.email)
+      UserMailer.send_schedule_early(user.email).deliver_now
+      puts user.email
     end
   end
 
@@ -16,8 +16,8 @@ namespace :send_mail_task do
   task send_mail_late: :environment do
     User.all.each do |user|
       #[AKELA_CHAMADA_DO_MAILER](user.email)
-      UserMailer.send_schedule(user.email).deliver_now
-      Rails.logger.debug(user.email)
+      UserMailer.send_schedule_late(user.email).deliver_now
+      puts user.email
     end
   end
 

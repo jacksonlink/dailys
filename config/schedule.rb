@@ -28,6 +28,7 @@
 
 every 2.minutes do
     rake 'rake send_mail_task:send_mail_early'
+    rake 'rake send_mail_task:send_mail_late'
     command mailto: 'jacksonfa7@gmail.com'
-
+    puts 'PASSOU PELO SCHEDULE DO WHENEVER'
 end

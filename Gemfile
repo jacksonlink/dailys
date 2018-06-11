@@ -23,6 +23,11 @@ gem 'whenever', require: false
 gem 'actionmailer', '5.2'
 
 gem 'pry'
+gem 'therubyracer'
+gem 'less-rails'
+gem 'twitter-bootstrap-rails'
+gem 'will_paginate', '~> 3.1.0'
+gem 'rails_refactor'
 
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
